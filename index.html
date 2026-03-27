@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Reset cơ bản */
+      * {
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        margin: 20px;
+        background-color: #f4f4f4;
+      }
+      .container {
+        display: flex;
+        gap: 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      /* Khu vực Form bên trái */
+      .form-container {
+        flex: 1;
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .form-group input,
+      .form-group select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+      }
+      button {
+        cursor: pointer;
+        padding: 10px 15px;
+        background: #333;
+        color: white;
+        border: none;
+      }
+      button:hover {
+        background: #555;
+      }
+
+      /* Khu vực Bảng bên phải */
+      .list-container {
+        flex: 2;
+        background: white;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      .filter-group {
+        margin-bottom: 15px;
+        display: flex;
+        gap: 10px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #eee;
+      }
+
+      /* Trạng thái đặc biệt */
+      .priority-high {
+        color: red;
+        font-weight: bold;
+      }
+      .even-row {
+        background-color: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; gap: 50px; padding: 20px">
+      <div style="width: 300px">
+        <h3>Nhập thông tin</h3>
+        <input
+          type="text"
+          id="inputName"
+          placeholder="Tên..."
+          style="display: block; margin-bottom: 10px; width: 100%"
+        />
+        <input
+          type="text"
+          id="inputInfo"
+          placeholder="Thông tin khác..."
+          style="display: block; margin-bottom: 10px; width: 100%"
+        />
+        <select
+          id="inputStatus"
+          style="display: block; margin-bottom: 10px; width: 100%"
+        >
+          <option value="ACTIVE">Hoạt động</option>
+          <option value="INACTIVE">Ngừng</option>
+        </select>
+        <button id="btnAdd">Thêm vào danh sách</button>
+      </div>
+
+      <div style="flex: 1">
+        <h3>Danh sách hiển thị</h3>
+        <table border="1" style="width: 100%; border-collapse: collapse">
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Tên</th>
+              <th>Chi tiết</th>
+              <th>Trạng thái</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <tr>
+              <td>Bản ghi 1</td>
+              <td>Bản ghi 2</td>
+              <td>Bản ghi 3</td>
+              <td>Bản ghi 4</td>
+            </tr>
+            <tr>
+              <td>Bản ghi 1</td>
+              <td>Bản ghi 2</td>
+              <td>Bản ghi 3</td>
+              <td>Bản ghi 4</td>
+            </tr>
+            <tr>
+              <td>Bản ghi 1</td>
+              <td>Bản ghi 2</td>
+              <td>Bản ghi 3</td>
+              <td>Bản ghi 4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
