@@ -95,62 +95,36 @@
     </style>
   </head>
   <body>
-    <div style="display: flex; gap: 50px; padding: 20px">
-      <div style="width: 300px">
-        <h3>Nhập thông tin</h3>
-        <input
-          type="text"
-          id="inputName"
-          placeholder="Tên..."
-          style="display: block; margin-bottom: 10px; width: 100%"
-        />
-        <input
-          type="text"
-          id="inputInfo"
-          placeholder="Thông tin khác..."
-          style="display: block; margin-bottom: 10px; width: 100%"
-        />
-        <select
-          id="inputStatus"
-          style="display: block; margin-bottom: 10px; width: 100%"
-        >
-          <option value="ACTIVE">Hoạt động</option>
-          <option value="INACTIVE">Ngừng</option>
-        </select>
-        <button id="btnAdd">Thêm vào danh sách</button>
+    <div class="container">
+      <div class="form-container">
+        <h3>Thông tin Sinh viên</h3>
+        <div class="form-group">
+          <label>Mã SV:</label>
+          <input type="text" id="studentId" />
+        </div>
+        <div class="form-group">
+          <label>Họ tên:</label>
+          <input type="text" id="studentName" />
+        </div>
+        <div class="form-group">
+          <label>Email:</label>
+          <input type="email" id="studentEmail" />
+        </div>
+        <button id="btnAdd">Thêm mới</button>
       </div>
 
-      <div style="flex: 1">
-        <h3>Danh sách hiển thị</h3>
-        <table border="1" style="width: 100%; border-collapse: collapse">
+      <div class="list-container">
+        <h3>Danh sách Sinh viên</h3>
+        <table>
           <thead>
             <tr>
               <th>STT</th>
-              <th>Tên</th>
-              <th>Chi tiết</th>
-              <th>Trạng thái</th>
+              <th>Mã SV</th>
+              <th>Họ tên</th>
+              <th>Email</th>
             </tr>
           </thead>
-          <tbody id="tableBody">
-            <tr>
-              <td>Bản ghi 1</td>
-              <td>Bản ghi 2</td>
-              <td>Bản ghi 3</td>
-              <td>Bản ghi 4</td>
-            </tr>
-            <tr>
-              <td>Bản ghi 1</td>
-              <td>Bản ghi 2</td>
-              <td>Bản ghi 3</td>
-              <td>Bản ghi 4</td>
-            </tr>
-            <tr>
-              <td>Bản ghi 1</td>
-              <td>Bản ghi 2</td>
-              <td>Bản ghi 3</td>
-              <td>Bản ghi 4</td>
-            </tr>
-          </tbody>
+          <tbody id="listStudent"></tbody>
         </table>
       </div>
     </div>
